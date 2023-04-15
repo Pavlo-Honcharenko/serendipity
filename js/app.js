@@ -3440,6 +3440,59 @@
                 FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
             } else FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
         };
+        function formFieldsInit(options = {
+            viewPass: false,
+            autoHeight: false
+        }) {
+            document.body.addEventListener("focusin", (function(e) {
+                const targetElement = e.target;
+                if (targetElement.tagName === "INPUT" || targetElement.tagName === "TEXTAREA") {
+                    if (!targetElement.hasAttribute("data-no-focus-classes")) {
+                        targetElement.classList.add("_form-focus");
+                        targetElement.parentElement.classList.add("_form-focus");
+                    }
+                    formValidate.removeError(targetElement);
+                    targetElement.hasAttribute("data-validate") ? formValidate.removeError(targetElement) : null;
+                }
+            }));
+            document.body.addEventListener("focusout", (function(e) {
+                const targetElement = e.target;
+                if (targetElement.tagName === "INPUT" || targetElement.tagName === "TEXTAREA") {
+                    if (!targetElement.hasAttribute("data-no-focus-classes")) {
+                        targetElement.classList.remove("_form-focus");
+                        targetElement.parentElement.classList.remove("_form-focus");
+                    }
+                    targetElement.hasAttribute("data-validate") ? formValidate.validateInput(targetElement) : null;
+                }
+            }));
+            if (options.viewPass) document.addEventListener("click", (function(e) {
+                let targetElement = e.target;
+                if (targetElement.closest('[class*="__viewpass"]')) {
+                    let inputType = targetElement.classList.contains("_viewpass-active") ? "password" : "text";
+                    targetElement.parentElement.querySelector("input").setAttribute("type", inputType);
+                    targetElement.classList.toggle("_viewpass-active");
+                }
+            }));
+            if (options.autoHeight) {
+                const textareas = document.querySelectorAll("textarea[data-autoheight]");
+                if (textareas.length) {
+                    textareas.forEach((textarea => {
+                        const startHeight = textarea.hasAttribute("data-autoheight-min") ? Number(textarea.dataset.autoheightMin) : Number(textarea.offsetHeight);
+                        const maxHeight = textarea.hasAttribute("data-autoheight-max") ? Number(textarea.dataset.autoheightMax) : 1 / 0;
+                        setHeight(textarea, Math.min(startHeight, maxHeight));
+                        textarea.addEventListener("input", (() => {
+                            if (textarea.scrollHeight > startHeight) {
+                                textarea.style.height = `auto`;
+                                setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
+                            }
+                        }));
+                    }));
+                    function setHeight(textarea, height) {
+                        textarea.style.height = `${height}px`;
+                    }
+                }
+            }
+        }
         let formValidate = {
             getErrors(form) {
                 let error = 0;
@@ -7029,7 +7082,45 @@
                 on: {}
             });
         }
+        function initSlider() {
+            if (document.querySelector(".swiper-news")) new core(".swiper-news", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                autoHeight: true,
+                speed: 800,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.03,
+                        spaceBetween: 10,
+                        autoHeight: true
+                    },
+                    640: {
+                        slidesPerView: 2.07,
+                        spaceBetween: 10,
+                        autoHeight: true
+                    },
+                    768: {
+                        slidesPerView: 2.07,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+        }
         window.addEventListener("load", (function(e) {
+            initSlider();
             if (window.innerWidth <= 992) initSliders(); else window.addEventListener("resize", (function() {
                 if (window.innerWidth <= 992) initSliders();
             }));
@@ -7185,6 +7276,10 @@
         window["FLS"] = false;
         isWebp();
         menuInit();
+        formFieldsInit({
+            viewPass: false,
+            autoHeight: false
+        });
         formSubmit();
         pageNavigation();
     })();
