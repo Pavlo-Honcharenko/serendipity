@@ -993,6 +993,9 @@ body {
   gap: 50px;
 }
 
+.no-webp .section-03__image{
+  background: url("../img/planets-big-2.png") center center/contain no-repeat; }
+
 .section-03__image {
   height: 100%;
   width: 100%;
@@ -1005,7 +1008,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("../img/planets-big-2.png") center center/contain no-repeat;
 }
 
 .section-03__title {
@@ -1296,12 +1298,14 @@ body {
   overflow: hidden;
 }
 
+.no-webp .section-07__col_left .section-07__image{
+  background: url("../img/planets-phones-big-3.png") 0 0/100% 100% no-repeat; }
+
 .section-07__col_left .section-07__image {
   display: block;
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  background: url("../img/planets-phones-big-3.png") 0 0/100% 100% no-repeat;
 }
 
 .section-07__col_right {
@@ -1350,14 +1354,18 @@ body {
   height: 58px;
 }
 
+.no-webp .section-07__button_app-store{
+  background: url("../img/button-app-store.png") center center/100% 100% no-repeat; }
+
 .section-07__button_app-store {
   width: 172px;
-  background: url("../img/button-app-store.png") center center/100% 100% no-repeat;
 }
+
+.no-webp .section-07__button_google-play{
+  background: url("../img/button-google-play.png") center center/100% 100% no-repeat; }
 
 .section-07__button_google-play {
   width: 195;
-  background: url("../img/button-google-play.png") center center/100% 100% no-repeat;
 }
 
 .section-08__header {
@@ -1951,9 +1959,8 @@ body {
 }
 
 @media (max-width: 75em) {
-  .section-07__col_left .section-07__image {
-    background: url("../img/planets-phones-big-3.png") -15px 0/120% 100% no-repeat;
-  }
+  .no-webp .section-07__col_left .section-07__image{
+    background: url("../img/planets-phones-big-3.png") -15px 0/120% 100% no-repeat; }
 }
 
 @media (max-width: 40em) {
@@ -2278,9 +2285,8 @@ body {
     margin: 20px auto 0;
   }
 
-  .section-07__col_left .section-07__image {
-    background: url("../img/planets-phones-big-3.png") -25px 0/130% 100% no-repeat;
-  }
+  .no-webp .section-07__col_left .section-07__image{
+    background: url("../img/planets-phones-big-3.png") -25px 0/130% 100% no-repeat; }
 }
 
 @media (max-width: 56.25em) {
@@ -2334,6 +2340,9 @@ body {
     height: 60px;
   }
 
+  .no-webp .header__menu{
+    background: url("../img/bg-small-1.jpg") 0 0/cover no-repeat; }
+
   .header__menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2351,7 +2360,6 @@ body {
     overflow: auto;
     padding-top: 70px;
     padding-bottom: 50px;
-    background: url("../img/bg-small-1.jpg") 0 0/cover no-repeat;
     z-index: 10;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
@@ -2457,6 +2465,9 @@ body {
     padding-top: 40%;
   }
 
+  .no-webp .section-03__image{
+    background: url("../img/planets-small-2.png") center center/contain no-repeat; }
+
   .section-03__image {
     position: absolute;
     top: 0;
@@ -2464,7 +2475,6 @@ body {
     right: 0;
     height: 0;
     padding-bottom: 56%;
-    background: url("../img/planets-small-2.png") center center/contain no-repeat;
   }
 
   .section-03__item .marker {
@@ -2480,13 +2490,17 @@ body {
     display: block;
   }
 
+  .no-webp .section-07__col_left .section-07__image{
+    background: url("../img/phones-small-3.png") center bottom no-repeat; }
+
   .section-07__col_left .section-07__image {
     height: 235px;
-    background: url("../img/phones-small-3.png") center bottom no-repeat;
   }
 
+  .no-webp .section-07__col_right{
+    background: url("../img/planets-small-3.png") 0 0 no-repeat; }
+
   .section-07__col_right {
-    background: url("../img/planets-small-3.png") 0 0 no-repeat;
     padding: 30px;
   }
 
@@ -3386,4 +3400,42 @@ body {
     background-color: rgba(3, 3, 201, 0);
     color: #0403C9;
   }
+}
+
+.webp .section-03__image{ background: url(../img/planets-big-2.webp) center center/contain no-repeat; }
+
+.webp .section-07__col_left .section-07__image{ background: url(../img/planets-phones-big-3.webp) 0 0/100% 100% no-repeat; }
+
+.webp .section-07__button_app-store{ background: url(../img/button-app-store.webp) center center/100% 100% no-repeat; }
+
+.webp .section-07__button_google-play{ background: url(../img/button-google-play.webp) center center/100% 100% no-repeat; }
+
+@media (max-width: 75em){
+
+  .webp .section-07__col_left .section-07__image{ background: url(../img/planets-phones-big-3.webp) -15px 0/120% 100% no-repeat; }
+}
+
+@media (max-width: 62.06125em){
+
+  .webp .section-07__col_left .section-07__image{ background: url(../img/planets-phones-big-3.webp) -25px 0/130% 100% no-repeat; }
+}
+
+@media (max-width: 48.06125em){
+
+  .webp .header__menu{ background: url(../img/bg-small-1.webp) 0 0/cover no-repeat; }
+}
+
+@media (max-width: 48.06125em){
+
+  .webp .section-03__image{ background: url(../img/planets-small-2.webp) center center/contain no-repeat; }
+}
+
+@media (max-width: 48.06125em){
+
+  .webp .section-07__col_left .section-07__image{ background: url(../img/phones-small-3.webp) center bottom no-repeat; }
+}
+
+@media (max-width: 48.06125em){
+
+  .webp .section-07__col_right{ background: url(../img/planets-small-3.webp) 0 0 no-repeat; }
 }
