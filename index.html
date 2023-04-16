@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230416121743">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230416183301">
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
@@ -34,7 +34,7 @@
 		<header class="header">
 			<div class="header__container">
 				<div class="header__logo">
-					<a href="index.html">
+					<a href="#" data-goto-header data-goto=".section-01__container">
 						BSI
 					</a>
 				</div>
@@ -44,16 +44,16 @@
 				<nav class="header__menu">
 					<ul class="header__menu-list">
 						<li class="header__menu-item">
-							<a href="index.html" class="header__menu-link">Про нас </a>
+							<a href="#" data-goto-header data-goto-top="30" data-goto=".section-02__container" class="header__menu-link">Про нас </a>
 						</li>
 						<li class="header__menu-item">
-							<a href="about.html" class="header__menu-link">Відгуки</a>
+							<a href="#" data-goto-header data-goto-top="30" data-goto=".section-06__container" class="header__menu-link">Відгуки</a>
 						</li>
 						<li class="header__menu-item">
-							<a href="services.html" class="header__menu-link">новини</a>
+							<a href="#" data-goto-header data-goto-top="30" data-goto=".section-08__container" class="header__menu-link">новини</a>
 						</li>
 						<li class="header__menu-item">
-							<a href="portfolio.html" class="header__menu-link">контакти</a>
+							<a href="#" data-goto-header data-goto-top="30" data-goto=".section-09__container" class="header__menu-link">контакти</a>
 						</li>
 					</ul>
 					<a href="#" class="header__button">скачати додаток</a>
@@ -65,10 +65,10 @@
 		<main class="page">
 
 
-
-
 			<!-- SECTION section-01 -->
 			<section class="section-01">
+				<div class="section-01__background">
+				</div>
 				<div class='section-01__container'>
 					<div class="section-01__row">
 
@@ -87,7 +87,7 @@
 								<div class="section-01__bottom">
 									<a href="" class="section-01__button">Почати</a>
 									<div class="section-01__info">
-										<picture><source srcset="img/users.webp" type="image/webp"><img src="img/users.png" alt="users"></picture>
+										<picture><source data-srcset="img/users.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/users.png" alt="users"></picture>
 										<span>3K+ Задоволених користувачів</span>
 									</div>
 								</div>
@@ -98,7 +98,7 @@
 							<div class="section-01__img">
 
 							</div>
-							<picture><source srcset="img/planets-big-1.webp" type="image/webp"><img src="img/planets-big-1.png" alt="Serendipity"></picture>
+							<picture><source data-srcset="img/planets-big-1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/planets-big-1.png" alt="Serendipity"></picture>
 						</div>
 
 					</div>
@@ -189,6 +189,8 @@
 
 			<!-- SECTION section-04 -->
 			<section class="section-04">
+				<div class="section-04__background">
+				</div>
 				<div class='section-04__container'>
 					<div class="section-04__row">
 						<div class="section-04__col section-04__col_left">
@@ -207,7 +209,7 @@
 							<div class="section-04__cards">
 								<div class="section-04__card">
 									<div class="section-04__card-header">
-										<img src="img/icon-01.svg" alt="icon">
+										<img data-src="img/icon-01.svg" alt="icon">
 										<h3 class="section-04__card-title">1. Скачайте наш додаток</h3>
 									</div>
 									<div class="section-04__card-content">
@@ -220,7 +222,7 @@
 
 								<div class="section-04__card">
 									<div class="section-04__card-header">
-										<img src="img/icon-02.svg" alt="icon">
+										<img data-src="img/icon-02.svg" alt="icon">
 										<h3 class="section-04__card-title">1. Iнсталюйте додаток</h3>
 									</div>
 									<div class="section-04__card-content">
@@ -236,7 +238,7 @@
 
 								<div class="section-04__card">
 									<div class="section-04__card-header">
-										<img src="img/icon-03.svg" alt="icon">
+										<img data-src="img/icon-03.svg" alt="icon">
 										<h3 class="section-04__card-title">3. Запустіть додаток</h3>
 									</div>
 									<div class="section-04__card-content">
@@ -258,12 +260,13 @@
 
 			<!-- SECTION section-05 -->
 			<section class="section-05">
+				<div class="section-05__background-color"></div>
 				<div class='section-05__container'>
 					<h2 class="section-05__title">Як це працює</h2>
 					<div class="section-05__description">Перегляньте в цьому відео інструкції для програми BSI. Вона проста у
 						використанні.</div>
 					<div class="section-05__video">
-						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/9JZTcoq0Pzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<iframe width="100%" height="100%" data-src="https://www.youtube.com/embed/9JZTcoq0Pzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					</div>
 				</div>
 			</section>
@@ -274,6 +277,7 @@
 
 			<!-- SECTION section-06 -->
 			<section class="section-06">
+				<div class="section-06__background-color"></div>
 				<div class="section-06__container">
 					<div class='section-06__header'>
 						<div class="section-06__row">
@@ -310,15 +314,15 @@
 									</div>
 									<div class="card-testimonial__author">
 										<div class="card-testimonial__image">
-											<picture><source srcset="img/author-1.webp" type="image/webp"><img src="img/author-1.jpg" alt="author"></picture>
+											<picture><source data-srcset="img/author-1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/author-1.jpg" alt="author"></picture>
 										</div>
 										<div class="card-testimonial__author-info">
 											<div class="card-testimonial__rating">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
 											</div>
 											<div class="card-testimonial__name">Lorem Ipsum</div>
 										</div>
@@ -339,15 +343,15 @@
 									</div>
 									<div class="card-testimonial__author">
 										<div class="card-testimonial__image">
-											<picture><source srcset="img/author-2.webp" type="image/webp"><img src="img/author-2.jpg" alt="author"></picture>
+											<picture><source data-srcset="img/author-2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/author-2.jpg" alt="author"></picture>
 										</div>
 										<div class="card-testimonial__author-info">
 											<div class="card-testimonial__rating">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
 											</div>
 											<div class="card-testimonial__name">Lorem Ipsum</div>
 										</div>
@@ -367,15 +371,15 @@
 									</div>
 									<div class="card-testimonial__author">
 										<div class="card-testimonial__image">
-											<picture><source srcset="img/author-1.webp" type="image/webp"><img src="img/author-1.jpg" alt="author"></picture>
+											<picture><source data-srcset="img/author-1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/author-1.jpg" alt="author"></picture>
 										</div>
 										<div class="card-testimonial__author-info">
 											<div class="card-testimonial__rating">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
-												<img src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
+												<img data-src="img/icon-star.svg" alt="star">
 											</div>
 											<div class="card-testimonial__name">Lorem Ipsum</div>
 										</div>
@@ -501,12 +505,14 @@
 
 			<!-- SECTION section-09 -->
 			<section class="section-09">
+				<div class="section-09__background">
+				</div>
 				<div class="section-09__container">
 					<div class="section-09__row">
 						<div class="section-09__col section-09__col_left">
 							<div class="section-09__image">
-								<picture><source srcset="img/planets-big-4.webp" type="image/webp"><img class="section-09__image_big" src="img/planets-big-4.png" alt="mail"></picture>
-								<picture><source srcset="img/planets-small-4.webp" type="image/webp"><img class="section-09__image_small" src="img/planets-small-4.png" alt="mail"></picture>
+								<picture><source data-srcset="img/planets-big-4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="section-09__image_big" data-src="img/planets-big-4.png" alt="mail"></picture>
+								<picture><source data-srcset="img/planets-small-4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="section-09__image_small" data-src="img/planets-small-4.png" alt="mail"></picture>
 							</div>
 						</div>
 
@@ -545,9 +551,9 @@
 		<footer class="footer">
 			<div class="footer__container">
 				<nav class="footer__links">
-					<a href="" class="footer__link" target="_blank">Головна</a>
-					<a href="" class="footer__link" target="_blank">Про нас</a>
-					<a href="" class="footer__link" target="_blank">Блог</a>
+					<a href="#" data-goto-header data-goto=".section-01__container" class="footer__link" target="_blank">Головна</a>
+					<a href="#" data-goto-header data-goto-top="30" data-goto=".section-02__container" class="footer__link" target="_blank">Про нас</a>
+					<a href="#" data-goto-header data-goto-top="30" data-goto=".section-08__container" class="footer__link" target="_blank">Блог</a>
 				</nav>
 
 				<div class="footer__copywright">
@@ -556,7 +562,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230416121743"></script>
+	<script src="js/app.min.js?_v=20230416183301"></script>
 </body>
 
 </html>

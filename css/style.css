@@ -365,6 +365,7 @@ body {
   font-weight: 400;
   line-height: 150%;
   background-color: #FDFDB8;
+  background-color: #fff;
 }
 
 .title-color__blue {
@@ -598,7 +599,20 @@ body {
 }
 
 .section-01 {
+  position: relative;
   padding-top: 80px;
+}
+
+.no-webp .section-01__background{
+  background: url("../img/bg-small-1.jpg") 0 0/100% 100% no-repeat; }
+
+.section-01__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1330px;
+  z-index: -1;
 }
 
 .section-01__container {
@@ -1061,6 +1075,22 @@ body {
   margin-bottom: 20px;
 }
 
+.section-04 {
+  position: relative;
+}
+
+.no-webp .section-04__background{
+  background: url("../img/bg-small-2.jpg") 0 0/100% 100% no-repeat; }
+
+.section-04__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1750px;
+  z-index: -1;
+}
+
 .section-04__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1131,6 +1161,20 @@ body {
   line-height: 150%;
 }
 
+.section-05 {
+  position: relative;
+}
+
+.section-05__background-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: #FDFDB7;
+}
+
 .section-05__title {
   font-weight: 700;
   line-height: 1.152173913;
@@ -1159,6 +1203,22 @@ body {
 
 .section-05 iframe {
   overflow: hidden;
+}
+
+.section-06 {
+  position: relative;
+}
+
+.section-06__background-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FDFDB7), color-stop(90%, rgba(253, 253, 183, 0.8431372549)), to(rgba(253, 253, 183, 0)));
+  background: -o-linear-gradient(top, #FDFDB7 0%, rgba(253, 253, 183, 0.8431372549) 90%, rgba(253, 253, 183, 0) 100%);
+  background: linear-gradient(180deg, #FDFDB7 0%, rgba(253, 253, 183, 0.8431372549) 90%, rgba(253, 253, 183, 0) 100%);
 }
 
 .section-06__row {
@@ -1474,6 +1534,22 @@ body {
   transition: all 0.3s ease 0s;
 }
 
+.section-09 {
+  position: relative;
+}
+
+.no-webp .section-09__background{
+  background: url("../img/bg-small-3.jpg") 0 0/100% 100% no-repeat; }
+
+.section-09__background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1750px;
+  z-index: -1;
+}
+
 .section-09__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1630,6 +1706,17 @@ body {
 
 .swiper-button-lock {
   display: none !important;
+}
+
+@media (min-width: 48.06125em) {
+  .no-webp .section-01__background{
+    background: url("../img/bg-medium-1.jpg") 0 0/100% 100% no-repeat; }
+
+  .no-webp .section-04__background{
+    background: url("../img/bg-medium-2.jpg") 0 0/100% 100% no-repeat; }
+
+  .no-webp .section-09__background{
+    background: url("../img/bg-medium-3.jpg") 0 0/100% 100% no-repeat; }
 }
 
 @media (min-width: 62.06125em) {
@@ -1956,6 +2043,17 @@ body {
   .section-09 .section-09__button {
     height: 4.4375rem;
   }
+}
+
+@media (min-width: 90em) {
+  .no-webp .section-01__background{
+    background: url("../img/bg-big-1.jpg") 0 0/100% 100% no-repeat; }
+
+  .no-webp .section-04__background{
+    background: url("../img/bg-big-2.jpg") 0 0/100% 100% no-repeat; }
+
+  .no-webp .section-09__background{
+    background: url("../img/bg-big-3.jpg") 0 0/100% 100% no-repeat; }
 }
 
 @media (max-width: 75em) {
@@ -2341,7 +2439,7 @@ body {
   }
 
   .no-webp .header__menu{
-    background: url("../img/bg-small-1.jpg") 0 0/cover no-repeat; }
+    background: url("../img/bg-small-1.jpg") 0 0/100% 150% no-repeat; }
 
   .header__menu {
     -webkit-box-orient: vertical;
@@ -3402,13 +3500,49 @@ body {
   }
 }
 
+.webp .section-01__background{ background: url(../img/bg-small-1.webp) 0 0/100% 100% no-repeat; }
+
 .webp .section-03__image{ background: url(../img/planets-big-2.webp) center center/contain no-repeat; }
+
+.webp .section-04__background{ background: url(../img/bg-small-2.webp) 0 0/100% 100% no-repeat; }
 
 .webp .section-07__col_left .section-07__image{ background: url(../img/planets-phones-big-3.webp) 0 0/100% 100% no-repeat; }
 
 .webp .section-07__button_app-store{ background: url(../img/button-app-store.webp) center center/100% 100% no-repeat; }
 
 .webp .section-07__button_google-play{ background: url(../img/button-google-play.webp) center center/100% 100% no-repeat; }
+
+.webp .section-09__background{ background: url(../img/bg-small-3.webp) 0 0/100% 100% no-repeat; }
+
+@media (min-width: 48.06125em){
+
+  .webp .section-01__background{ background: url(../img/bg-medium-1.webp) 0 0/100% 100% no-repeat; }
+}
+
+@media (min-width: 48.06125em){
+
+  .webp .section-04__background{ background: url(../img/bg-medium-2.webp) 0 0/100% 100% no-repeat; }
+}
+
+@media (min-width: 48.06125em){
+
+  .webp .section-09__background{ background: url(../img/bg-medium-3.webp) 0 0/100% 100% no-repeat; }
+}
+
+@media (min-width: 90em){
+
+  .webp .section-01__background{ background: url(../img/bg-big-1.webp) 0 0/100% 100% no-repeat; }
+}
+
+@media (min-width: 90em){
+
+  .webp .section-04__background{ background: url(../img/bg-big-2.webp) 0 0/100% 100% no-repeat; }
+}
+
+@media (min-width: 90em){
+
+  .webp .section-09__background{ background: url(../img/bg-big-3.webp) 0 0/100% 100% no-repeat; }
+}
 
 @media (max-width: 75em){
 
@@ -3422,7 +3556,7 @@ body {
 
 @media (max-width: 48.06125em){
 
-  .webp .header__menu{ background: url(../img/bg-small-1.webp) 0 0/cover no-repeat; }
+  .webp .header__menu{ background: url(../img/bg-small-1.webp) 0 0/100% 150% no-repeat; }
 }
 
 @media (max-width: 48.06125em){
